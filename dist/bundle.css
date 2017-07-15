@@ -1,0 +1,38 @@
+* {
+  /* So 100% means 100% */
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+#react-root {
+  height: 100%;
+}
+#react-app {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.layout-border {
+  display: flex;
+}
+.layout-border.vertical {
+  flex-direction: column;
+}
+.layout-border > .region-center {
+  flex: 1;
+}
