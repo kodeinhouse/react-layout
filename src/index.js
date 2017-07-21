@@ -1,4 +1,4 @@
-import '../styles/required/import.less';
+import '../styles/import.less';
 
 // Panels
 export { Container } from './Container';

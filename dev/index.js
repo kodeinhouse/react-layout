@@ -5,8 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 // AppContainer is a necessary wrapper component for HMR
 
 import { Demo } from '../src/Demo';
-import '../styles/required/import.less';
-import '../styles/optional/import.less';
+import '../styles/outline.less';
 
 const render = (Component) => {
   ReactDOM.render(
