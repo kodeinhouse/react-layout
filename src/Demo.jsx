@@ -16,7 +16,7 @@ export class Demo extends Component
                     <Application.Navigation>
                         Navigation
                     </Application.Navigation>
-                    <Application.Content scrollable={false}>
+                    <Application.Content>
                         <div style={{minHeight: '1000px', backgroundColor: 'cornflowerblue'}}>
                             Very long div
                         </div>
