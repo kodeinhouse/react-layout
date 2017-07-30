@@ -1495,6 +1495,8 @@ var Container = function (_Component) {
 
             if (this.props.region) classes.push('region-' + this.props.region);
 
+            if (this.props.overflow === false) style.overflow = 'hidden';
+
             if (this.props.scrollable === false) style.overflow = 'hidden';
 
             if (this.props.scrollable === true) style.overflow = 'auto';
@@ -4883,7 +4885,9 @@ var Application = function (_Component) {
     _createClass(Application, [{
         key: 'render',
         value: function render() {
-            var props = Object.assign({ orientation: 'vertical', layout: 'border' }, this.props);
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ orientation: 'vertical', layout: 'border', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
@@ -4908,7 +4912,9 @@ var ApplicationHeader = function (_Component2) {
     _createClass(ApplicationHeader, [{
         key: 'render',
         value: function render() {
-            var props = Object.assign({ region: 'north' }, this.props);
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ region: 'north', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
@@ -4933,7 +4939,9 @@ var ApplicationContainer = function (_Component3) {
     _createClass(ApplicationContainer, [{
         key: 'render',
         value: function render() {
-            var props = Object.assign({ layout: "border", region: "center" }, this.props);
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ layout: "border", region: "center", overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
@@ -4958,11 +4966,11 @@ var ApplicationContent = function (_Component4) {
     _createClass(ApplicationContent, [{
         key: 'render',
         value: function render() {
-            var props = Object.assign({ region: 'center' }, this.props);
+            var props = Object.assign({ region: 'center', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-content', region: 'center' }, props),
+                _extends({ id: 'main-content' }, props),
                 this.props.children
             );
         }
@@ -4983,9 +4991,13 @@ var ApplicationNavigation = function (_Component5) {
     _createClass(ApplicationNavigation, [{
         key: 'render',
         value: function render() {
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ overflow: false }, this.props);
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-nav' }, this.props),
+                _extends({ id: 'main-nav' }, props),
                 this.props.children
             );
         }
@@ -5006,9 +5018,13 @@ var ApplicationAside = function (_Component6) {
     _createClass(ApplicationAside, [{
         key: 'render',
         value: function render() {
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ overflow: false }, this.props);
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-aside' }, this.props),
+                _extends({ id: 'main-aside' }, props),
                 this.props.children
             );
         }
@@ -5029,9 +5045,13 @@ var ApplicationFooter = function (_Component7) {
     _createClass(ApplicationFooter, [{
         key: 'render',
         value: function render() {
+            // We can safely set the overflow to false because for full screen apps we don't
+            // want the content overflow the main wrappers
+            var props = Object.assign({ overflow: false }, this.props);
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-footer' }, this.props),
+                _extends({ id: 'main-footer' }, props),
                 this.props.children
             );
         }
