@@ -23,10 +23,10 @@ export class ApplicationHeader extends Component
     {
         // We can safely set the overflow to false because for full screen apps we don't
         // want the content overflow the main wrappers
-        let props = Object.assign({region: 'north', overflow: false}, this.props);
+        let props = Object.assign({id: 'main-header', region: 'north', overflow: false}, this.props);
 
         return (
-            <Container id="main-header" {...props}>
+            <Container {...props}>
                 {this.props.children}
             </Container>
         );
@@ -39,10 +39,10 @@ export class ApplicationContainer extends Component
     {
         // We can safely set the overflow to false because for full screen apps we don't
         // want the content overflow the main wrappers
-        let props = Object.assign({layout:"border", region:"center", overflow: false}, this.props);
+        let props = Object.assign({id: 'main-container', layout:"border", region:"center", overflow: false}, this.props);
 
         return (
-            <Container id="main-container" {...props}>
+            <Container {...props}>
                 {this.props.children}
             </Container>
         );
@@ -53,10 +53,10 @@ export class ApplicationContent extends Component
 {
     render()
     {
-        let props = Object.assign({region: 'center', overflow: false}, this.props);
+        let props = Object.assign({id: 'main-content', region: 'center', layout: 'border', overflow: false}, this.props);
 
         return (
-            <Container id="main-content" {...props}>
+            <Container {...props}>
                 {this.props.children}
             </Container>
         );
@@ -69,9 +69,9 @@ export class ApplicationNavigation extends Component
     {
         // We can safely set the overflow to false because for full screen apps we don't
         // want the content overflow the main wrappers
-        let props = Object.assign({overflow: false}, this.props);
+        let props = Object.assign({id: 'main-nav', overflow: false}, this.props);
 
-        return <Container id="main-nav" {...props}>{this.props.children}</Container>;
+        return <Container {...props}>{this.props.children}</Container>;
     }
 }
 
@@ -81,10 +81,10 @@ export class ApplicationAside extends Component
     {
         // We can safely set the overflow to false because for full screen apps we don't
         // want the content overflow the main wrappers
-        let props = Object.assign({overflow: false}, this.props);
+        let props = Object.assign({id: 'main-aside', overflow: false}, this.props);
 
         return (
-            <Container id="main-aside" {...props}>
+            <Container {...props}>
                 {this.props.children}
             </Container>
         );
