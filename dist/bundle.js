@@ -4914,11 +4914,11 @@ var ApplicationHeader = function (_Component2) {
         value: function render() {
             // We can safely set the overflow to false because for full screen apps we don't
             // want the content overflow the main wrappers
-            var props = Object.assign({ region: 'north', overflow: false }, this.props);
+            var props = Object.assign({ id: 'main-header', region: 'north', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-header' }, props),
+                props,
                 this.props.children
             );
         }
@@ -4941,11 +4941,11 @@ var ApplicationContainer = function (_Component3) {
         value: function render() {
             // We can safely set the overflow to false because for full screen apps we don't
             // want the content overflow the main wrappers
-            var props = Object.assign({ layout: "border", region: "center", overflow: false }, this.props);
+            var props = Object.assign({ id: 'main-container', layout: "border", region: "center", overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-container' }, props),
+                props,
                 this.props.children
             );
         }
@@ -4966,11 +4966,11 @@ var ApplicationContent = function (_Component4) {
     _createClass(ApplicationContent, [{
         key: 'render',
         value: function render() {
-            var props = Object.assign({ region: 'center', overflow: false }, this.props);
+            var props = Object.assign({ id: 'main-content', region: 'center', layout: 'border', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-content' }, props),
+                props,
                 this.props.children
             );
         }
@@ -4993,11 +4993,11 @@ var ApplicationNavigation = function (_Component5) {
         value: function render() {
             // We can safely set the overflow to false because for full screen apps we don't
             // want the content overflow the main wrappers
-            var props = Object.assign({ overflow: false }, this.props);
+            var props = Object.assign({ id: 'main-nav', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-nav' }, props),
+                props,
                 this.props.children
             );
         }
@@ -5020,11 +5020,11 @@ var ApplicationAside = function (_Component6) {
         value: function render() {
             // We can safely set the overflow to false because for full screen apps we don't
             // want the content overflow the main wrappers
-            var props = Object.assign({ overflow: false }, this.props);
+            var props = Object.assign({ id: 'main-aside', overflow: false }, this.props);
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Container__["a" /* Container */],
-                _extends({ id: 'main-aside' }, props),
+                props,
                 this.props.children
             );
         }
