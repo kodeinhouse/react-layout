@@ -1,14 +1,24 @@
 .layout-border
 {
+    display: -webkit-box; /* Safari & Chrome */
+    display: -ms-flexbox; /* Internet Explorer */
+    display: -moz-box;
+    display: -webkit-flex;
     display: flex;
 
     &.vertical
     {
-        flex-direction: column;
+        -webkit-box-orient: vertical; /* Safari & Chrome */
+        -ms-flex-direction: column; /* Internet Explorer */
+            flex-direction: column;
     }
 
     & > .region-center
     {
-        flex: 1;
+        -webkit-box-flex: 1; /* Safari & Chrome */
+           -moz-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1; /* Internet Explorer */
+                    flex: 1;
     }
 }
