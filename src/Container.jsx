@@ -49,6 +49,12 @@ export class Container extends Component
         if(this.props.margin)
             style.margin = this.props.margin;
 
+        if(this.props.padding)
+            style.padding = this.props.padding;
+
+        if(this.props.margin)
+            style.margin = this.props.margin;
+            
         return <div id={this.props.id} className={classes.join(' ')} style={style}>{this.props.children}</div>;
     }
 }

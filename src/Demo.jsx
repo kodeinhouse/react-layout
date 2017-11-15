@@ -9,7 +9,7 @@ export class Demo extends Component
         return (
             <Application>
                 <Application.Header layout="border">
-                    <Container width="208px">Logo</Container>
+                    <Container width="208px">Logo ddd</Container>
                     <Container region="center">Menu</Container>
                 </Application.Header>
                 <Application.Container>
